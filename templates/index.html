@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PlantUML Generator</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+    
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    
+        form {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+    
+        input[type="text"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+    
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    
+        h2 {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+    
+        pre {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 10px;
+            font-family: monospace;
+        }
+    </style>
+
+
+    <h1>PlantUML Generator</h1>
+    <form action="/generate" method="post">
+        <label for="group_name">Group Name:</label>
+        <input type="text" id="group_name" name="group_name"><br><br>
+
+        <label for="component1_name">Component 1 Name:</label>
+        <input type="text" id="component1_name" name="component1_name"><br><br>
+
+        <label for="component2_name">Component 2 Name:</label>
+        <input type="text" id="component2_name" name="component2_name"><br><br>
+
+        <label for="component3_name">Component 3 Name:</label>
+        <input type="text" id="component3_name" name="component3_name"><br><br>
+
+        <label for="component3_name">Component 4 Name:</label>
+        <input type="text" id="component4_name" name="component4_name"><br><br>
+
+        <label for="component3_name">Component 5 Name:</label>
+        <input type="text" id="component5_name" name="component5_name"><br><br>
+
+        <label for="component3_name">Component 6 Name:</label>
+        <input type="text" id="component6_name" name="component6_name"><br><br>
+
+        <label for="component3_name">Component 7 Name:</label>
+        <input type="text" id="component7_name" name="component7_name"><br><br>
+
+        <label for="component3_name">Component 8 Name:</label>
+        <input type="text" id="component8_name" name="component8_name"><br><br>
+
+        <label for="component3_name">Component 9 Name:</label>
+        <input type="text" id="component9_name" name="component9_name"><br><br>
+
+        <label for="component3_name">Component 10 Name:</label>
+        <input type="text" id="component10_name" name="component10_name"><br><br>
+
+        <label for="example1_name">Example 1 Name:</label>
+        <input type="text" id="example1_name" name="example1_name"><br><br>
+
+        <label for="folder3_name">Folder 3 Name:</label>
+        <input type="text" id="folder3_name" name="folder3_name"><br><br>
+
+        <label for="frame4_name">Frame 4 Name:</label>
+        <input type="text" id="frame4_name" name="frame4_name"><br><br>
+
+        <input type="submit" value="Generate">
+    </form>
+
+    {% if plantuml_code %}
+    <h2>Generated PlantUML Code:</h2>
+    <pre>{{ plantuml_code }}</pre>
+    {% endif %}
+</body>
+
+</html>
